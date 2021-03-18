@@ -45,6 +45,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WQ-At-Qvt">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="151"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" image="fishbowl"/>
                                         <connections>
                                             <action selector="floatingButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VXc-40-X9C"/>
