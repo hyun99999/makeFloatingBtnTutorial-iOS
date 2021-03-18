@@ -21,6 +21,17 @@ class ViewController: UIViewController {
     // 플로팅 버튼 상태 flag
     var isShowFloating: Bool = false
     
+    lazy var floatingDimView: UIView = {
+        let view = UIView(frame: self.view.frame)
+        view.backgroundColor = UIColor(red:0, green: 0, blue: 0, alpha: 0.5)
+        view.alpha = 0
+        view.isHidden = true
+        
+        self.view.insertSubview(view, belowSubview: self.floatingStackView)
+        
+       return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,12 +46,18 @@ class ViewController: UIViewController {
                     button.isHidden = true
                     self.view.layoutIfNeeded()
                 }
-                
+            }
+            UIView.animate(withDuration: 0.5, animations: {
+                self.floatingDimView.alpha = 0
+            }) {(_) in
+                self.floatingDimView.isHidden = true
             }
             
         } else {
+            self.floatingDimView.isHidden = false
+            
             UIView.animate(withDuration: 0.5) {
-                
+                self.floatingDimView.alpha = 1
             }
             buttons.forEach { [weak self] button in
                 button.isHidden = false
