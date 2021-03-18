@@ -46,6 +46,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WQ-At-Qvt">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="151"/>
                                         <state key="normal" image="fishbowl"/>
+                                        <connections>
+                                            <action selector="floatingButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VXc-40-X9C"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -57,6 +60,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ish-2j-VNb" secondAttribute="trailing" constant="20" id="Vuh-0z-9G0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="editBtn" destination="6zc-ot-dWj" id="41l-ga-a5f"/>
+                        <outlet property="floatingBtn" destination="1WQ-At-Qvt" id="FST-SA-HnR"/>
+                        <outlet property="floatingStackView" destination="Ish-2j-VNb" id="HsT-a9-bd4"/>
+                        <outlet property="removeBtn" destination="IIl-z6-zFZ" id="UO8-HC-pHk"/>
+                        <outlet property="shareBtn" destination="2uB-GY-Ecg" id="m3y-8A-C6T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
