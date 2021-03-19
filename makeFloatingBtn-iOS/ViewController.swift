@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var floatingStackView: UIStackView!
     @IBOutlet weak var floatingBtn: UIButton!
     @IBOutlet weak var shareBtn: UIButton!
@@ -37,7 +38,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
  
     }
-    
+    //MARK : - @IBAction
+    // floatingButtonAction
     @IBAction func floatingButtonAction(_ sender: UIButton) {
         if isShowFloating {
             // hide animation
@@ -79,6 +81,11 @@ class ViewController: UIViewController {
                     sender.setImage(image, for: .normal)
                     sender.transform = roatation
                 }
+    }
+    //추후 버튼을 누르는 onclicked함수를 만들고 매개변수로 버튼의 변수명과 액션메서드를 받아서 내용은 버튼에 액션 추가메서드를 작성하면 모든 버튼에 적용가능하지 않을까??->라이브러리화
+    // 일단은 일일히 지정.
+    @IBAction func editBtnClicked(_ sender: UIButton) {
+        textLabel.text = "수정하기"
     }
 }
 

@@ -26,6 +26,9 @@
                                         <state key="normal" title="수정하기" image="pencil" catalog="system">
                                             <color key="titleColor" systemColor="systemIndigoColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="editBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BUo-QB-5Ix"/>
+                                        </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIl-z6-zFZ">
                                         <rect key="frame" x="0.0" y="0.0" width="89.5" height="0.0"/>
@@ -56,12 +59,20 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYG-VN-hzU">
+                                <rect key="frame" x="160" y="424" width="94" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="TYG-VN-hzU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FJ4-0g-UGT"/>
                             <constraint firstItem="Ish-2j-VNb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VUM-pZ-VNe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ish-2j-VNb" secondAttribute="trailing" constant="20" id="Vuh-0z-9G0"/>
+                            <constraint firstItem="TYG-VN-hzU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zVG-FB-W1h"/>
                         </constraints>
                     </view>
                     <connections>
@@ -70,6 +81,7 @@
                         <outlet property="floatingStackView" destination="Ish-2j-VNb" id="HsT-a9-bd4"/>
                         <outlet property="removeBtn" destination="IIl-z6-zFZ" id="UO8-HC-pHk"/>
                         <outlet property="shareBtn" destination="2uB-GY-Ecg" id="m3y-8A-C6T"/>
+                        <outlet property="textLabel" destination="TYG-VN-hzU" id="mHd-q5-KUU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
