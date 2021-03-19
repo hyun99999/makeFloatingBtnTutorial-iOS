@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     lazy var floatingDimView: UIView = {
         let view = UIView(frame: self.view.frame)
-        view.backgroundColor = UIColor(red:0, green: 0, blue: 0, alpha: 0.5)
+        view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         view.alpha = 0
         view.isHidden = true
         
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         if isShowFloating {
             // hide animation
             buttons.reversed().forEach { button in
-                UIView.animate(withDuration: 0.3) {
+                UIView.animate(withDuration: 0.5) {
                     button.isHidden = true
                     self.view.layoutIfNeeded()
                 }
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
                 button.isHidden = false
                 button.alpha = 0
                 
-                UIView.animate(withDuration: 0.3) {
+                UIView.animate(withDuration: 0.5) {
                     button.alpha = 1
                     self?.view.layoutIfNeeded()
                 }
