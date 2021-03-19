@@ -31,8 +31,9 @@ buttons.reversed().forEach { button in
 }
 ```
 ### 완성
-<img src ="https://user-images.githubusercontent.com/69136340/111800883-bd659d00-890f-11eb-8812-3344c0804221.png" width ="250">
 <img src ="https://user-images.githubusercontent.com/69136340/111800886-bdfe3380-890f-11eb-8603-b743c756148a.png" width ="250">
+<img src ="https://user-images.githubusercontent.com/69136340/111800883-bd659d00-890f-11eb-8812-3344c0804221.png" width ="250">
+
 
 ### 출처
 출처|https://swieeft.github.io/2020/03/21/FloatingButton.html
