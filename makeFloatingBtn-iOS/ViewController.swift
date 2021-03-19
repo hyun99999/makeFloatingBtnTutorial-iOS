@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         isShowFloating = !isShowFloating
         
         // rotation
-        let image = isShowFloating ? UIImage(named: "fishbowl") : UIImage(named: "fishbowl")
+        let image = isShowFloating ? UIImage(systemName: "plus.circle.fill") : UIImage(systemName: "plus.circle.fill")
                 let roatation = isShowFloating ? CGAffineTransform(rotationAngle: .pi - (.pi / 4)) : CGAffineTransform.identity
 
                 UIView.animate(withDuration: 0.3) {

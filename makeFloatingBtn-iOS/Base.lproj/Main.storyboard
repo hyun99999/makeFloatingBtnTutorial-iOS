@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Ish-2j-VNb">
-                                <rect key="frame" x="244" y="711" width="150" height="151"/>
+                                <rect key="frame" x="304.5" y="794" width="89.5" height="68"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zc-ot-dWj">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="0.0"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                         <state key="normal" title="수정하기" image="pencil" catalog="system">
@@ -28,7 +28,7 @@
                                         </state>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIl-z6-zFZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="0.0"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                         <state key="normal" title="삭제하기" image="trash.fill" catalog="system">
@@ -36,7 +36,7 @@
                                         </state>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uB-GY-Ecg">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="0.0"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                         <state key="normal" title="공유하기" image="square.and.arrow.up.fill" catalog="system">
@@ -44,9 +44,11 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WQ-At-Qvt">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="151"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="68"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" image="fishbowl"/>
+                                        <state key="normal" image="plus.circle.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="60"/>
+                                        </state>
                                         <connections>
                                             <action selector="floatingButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VXc-40-X9C"/>
                                         </connections>
@@ -75,8 +77,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fishbowl" width="150" height="151"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
