@@ -86,6 +86,17 @@ class ViewController: UIViewController {
     // 일단은 일일히 지정.
     @IBAction func editBtnClicked(_ sender: UIButton) {
         textLabel.text = "수정하기"
+        buttons.reversed().forEach { button in
+            UIView.animate(withDuration: 0.5) {
+                button.isHidden = true
+                self.view.layoutIfNeeded()
+            }
+        }
+        UIView.animate(withDuration: 0.5, animations: {
+            self.floatingDimView.alpha = 0
+        }) {(_) in
+            self.floatingDimView.isHidden = true
+        }
     }
 }
 
