@@ -75,12 +75,12 @@ class ViewController: UIViewController {
         
         // rotation
         let image = isShowFloating ? UIImage(systemName: "plus.circle.fill") : UIImage(systemName: "plus.circle.fill")
-                let roatation = isShowFloating ? CGAffineTransform(rotationAngle: .pi - (.pi / 4)) : CGAffineTransform.identity
+        let roatation = isShowFloating ? CGAffineTransform(rotationAngle: .pi - (.pi / 4)) : CGAffineTransform.identity
 
-                UIView.animate(withDuration: 0.3) {
-                    sender.setImage(image, for: .normal)
-                    sender.transform = roatation
-                }
+        UIView.animate(withDuration: 0.3) {
+            sender.setImage(image, for: .normal)
+            sender.transform = roatation
+        }
     }
     //추후 버튼을 누르는 onclicked함수를 만들고 매개변수로 버튼의 변수명과 액션메서드를 받아서 내용은 버튼에 액션 추가메서드를 작성하면 모든 버튼에 적용가능하지 않을까??->라이브러리화
     // 일단은 일일히 지정.
@@ -92,11 +92,24 @@ class ViewController: UIViewController {
                 self.view.layoutIfNeeded()
             }
         }
+        
         UIView.animate(withDuration: 0.5, animations: {
             self.floatingDimView.alpha = 0
         }) {(_) in
             self.floatingDimView.isHidden = true
         }
+        isShowFloating = !isShowFloating
+        
+        //rotation
+        let image = isShowFloating ? UIImage(systemName: "plus.circle.fill") : UIImage(systemName: "plus.circle.fill")
+        let roatation = isShowFloating ? CGAffineTransform(rotationAngle: .pi - (.pi / 4)) : CGAffineTransform.identity
+
+        UIView.animate(withDuration: 0.3) {
+            self.floatingBtn.setImage(image, for: .normal)
+            self.floatingBtn.transform = roatation
+        }
     }
+    // 왜 라벨이 나타나기 효과로 등장하는 건가?
+    //수정하기 눌르면 floatingbutton 모양 변하지 않음 이래저래 오류 잡기.
 }
 
