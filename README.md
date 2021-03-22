@@ -30,6 +30,25 @@ buttons.reversed().forEach { button in
     }
 }
 ```
+**UIView animate**
+```swift
+UIView.animate(withDuration: 0.5, animations: {
+                self.floatingDimView.alpha = 0
+            })
+//클로저가 축약 가능.
+UIView.animate(withDuration: 0.5) {
+                self.floatingDimView.alpha = 0
+            }
+```
+//series of animation
+```swift
+UIView.animate(withDuration: 0.5, animations: {
+                self.floatingDimView.alpha = 0
+            }) {(_) in
+                self.floatingDimView.isHidden = true
+            }
+```
+
 ### 완성
 <img src ="https://user-images.githubusercontent.com/69136340/111800886-bdfe3380-890f-11eb-8603-b743c756148a.png" width ="250">
 <img src ="https://user-images.githubusercontent.com/69136340/111800883-bd659d00-890f-11eb-8812-3344c0804221.png" width ="250">
