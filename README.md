@@ -50,9 +50,10 @@ UIView.animate(withDuration: 0.5, animations: {
 ```
 
 ### 완성
+<p>
 <img src ="https://user-images.githubusercontent.com/69136340/111800886-bdfe3380-890f-11eb-8603-b743c756148a.png" width ="250">
 <img src ="https://user-images.githubusercontent.com/69136340/111993940-8afbb000-8b5a-11eb-9a54-749db362e331.png" width ="250">
-
+</p>
 
 ### 출처
 출처|https://swieeft.github.io/2020/03/21/FloatingButton.html
