@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+//MARK: -  @IBOutlet
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var floatingStackView: UIStackView!
     @IBOutlet weak var floatingBtn: UIButton!
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
  
     }
-    //MARK : - @IBAction
+    //MARK: - @IBAction
     // floatingButtonAction
     @IBAction func floatingButtonAction(_ sender: UIButton) {
         if isShowFloating {
@@ -86,6 +86,20 @@ class ViewController: UIViewController {
     // 일단은 일일히 지정.
     @IBAction func editBtnClicked(_ sender: UIButton) {
         textLabel.text = "수정하기"
+        hideFunc()
+    }
+    // 왜 라벨이 나타나기 효과로 등장하는 건가?
+    @IBAction func removeBtnClicked(_ sender: UIButton) {
+        textLabel.text = "삭제하기"
+        hideFunc()
+    }
+    @IBAction func shareBtnClicked(_ sender: UIButton) {
+        textLabel.text = "공유하기"
+        hideFunc()
+    }
+    
+    //MARK: - methods
+    func hideFunc() {
         buttons.reversed().forEach { button in
             UIView.animate(withDuration: 0.5) {
                 button.isHidden = true
@@ -109,7 +123,5 @@ class ViewController: UIViewController {
             self.floatingBtn.transform = roatation
         }
     }
-    // 왜 라벨이 나타나기 효과로 등장하는 건가?
-    //수정하기 눌르면 floatingbutton 모양 변하지 않음 이래저래 오류 잡기.
 }
 

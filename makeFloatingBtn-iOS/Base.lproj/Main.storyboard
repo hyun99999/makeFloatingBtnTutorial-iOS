@@ -37,6 +37,9 @@
                                         <state key="normal" title="삭제하기" image="trash.fill" catalog="system">
                                             <color key="titleColor" systemColor="systemIndigoColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="removeBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WBf-WK-M1W"/>
+                                        </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uB-GY-Ecg">
                                         <rect key="frame" x="0.0" y="0.0" width="89.5" height="0.0"/>
@@ -45,6 +48,9 @@
                                         <state key="normal" title="공유하기" image="square.and.arrow.up.fill" catalog="system">
                                             <color key="titleColor" systemColor="systemIndigoColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="shareBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZY-Yz-bLD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WQ-At-Qvt">
                                         <rect key="frame" x="0.0" y="0.0" width="89.5" height="68"/>
