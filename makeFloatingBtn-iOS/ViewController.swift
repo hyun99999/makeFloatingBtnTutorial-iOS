@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     // 플로팅 버튼 상태 flag
     var isShowFloating: Bool = false
     
+    // app don't know if user using floatingBtn or not until it clicks
     lazy var floatingDimView: UIView = {
         let view = UIView(frame: self.view.frame)
         view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
@@ -83,19 +84,18 @@ class ViewController: UIViewController {
         }
     }
     //추후 버튼을 누르는 onclicked함수를 만들고 매개변수로 버튼의 변수명과 액션메서드를 받아서 내용은 버튼에 액션 추가메서드를 작성하면 모든 버튼에 적용가능하지 않을까??->라이브러리화
-    // 일단은 일일히 지정.
     @IBAction func editBtnClicked(_ sender: UIButton) {
+        //UIView.animate 에서 값의 변경에 대한 애니메이션이 기본값으로 되는 듯.
+        hideFunc()
         textLabel.text = "수정하기"
-        hideFunc()
     }
-    // 왜 라벨이 나타나기 효과로 등장하는 건가?
     @IBAction func removeBtnClicked(_ sender: UIButton) {
-        textLabel.text = "삭제하기"
         hideFunc()
+        textLabel.text = "삭제하기"
     }
     @IBAction func shareBtnClicked(_ sender: UIButton) {
-        textLabel.text = "공유하기"
         hideFunc()
+        textLabel.text = "공유하기"
     }
     
     //MARK: - methods
